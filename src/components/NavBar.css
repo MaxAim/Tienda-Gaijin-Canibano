@@ -32,7 +32,12 @@ a{
     text-align: center;
 }
 
-a:hover{
+#Cart{
+    background-color: lightblue;
+    border-radius: 0 5px 5px 0;
+}
+
+a:hover, #Cart:hover{
     color: white;
     background-color: black;
 }
