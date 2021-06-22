@@ -5,11 +5,11 @@ import ItemCount from "../ItemCount";
 function ItemListContainer() {
         return (
         <div id="ItemListContainer">
-            <ItemCount stock="10" />
-            <ItemCount stock="0" />
-            <ItemCount stock="3" />
-            <ItemCount stock="6" />
-            <ItemCount stock="4" />
+            <ItemCount stock={10} initial={0} />
+            <ItemCount stock={0} initial={0} />
+            <ItemCount stock={3} initial={0} />
+            <ItemCount stock={6} initial={0} />
+            <ItemCount stock={4} initial={0} />
         </div>)
 }
 

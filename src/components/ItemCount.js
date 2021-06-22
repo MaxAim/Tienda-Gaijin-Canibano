@@ -2,19 +2,8 @@ import Button from "./Button";
 import React, {useState} from "react"
 
 
-function ItemCount({stock}){
-    const [num, setNum] = useState(0);
-    
-    return (
-    <div style={{width: "100px"}}>
-        <Button text={"Agregar"} width={"75px"} height={"34px"} border={"none"} backgroundColor={"rgb(18, 0, 177)"} color={"white"} onClick={onAdd} display={num === 0  && stock !== 0 ? "inline" : "none" }/>
-        <div style={{display: num === 0  ? "none" : "inline-flex", justifyContent: "center"}}>
-            <Button text={"-"} width={"34px"} height={"34px"} backgroundColor={"gray"} onClick={onSub}  />
-            <input style={{display: num === 0  ? "none" : "block", width: num === 10  ? "26px" : "24px"}} type="text" value={num} onChange={handleChange} />
-            <Button text={"+"} width={"34px"} height={"34px"} backgroundColor={"gray"} onClick={onAdd} />
-        </div>
-    </div>
-    )
+function ItemCount({stock, initial}){
+    const [num, setNum] = useState(initial);
 
     function onAdd(){
         num < stock ? setNum(num + 1) : setNum(num);
@@ -26,5 +15,18 @@ function ItemCount({stock}){
     function handleChange() {
         setNum(num)
       }
+    
+    return (
+    <div style={{width: "100px"}}>
+        <Button text={"Agregar"} width={"75px"} height={"34px"} border={"none"} backgroundColor={"rgb(18, 0, 177)"} color={"white"} onClick={onAdd} display={num === 0  && stock !== 0 ? "inline" : "none" }/>
+        <div style={{display: num === 0  ? "none" : "inline-flex", justifyContent: "center"}}>
+            <Button text={"-"} width={"34px"} height={"34px"} backgroundColor={"gray"} onClick={onSub}  />
+            <input style={{display: num === 0  ? "none" : "block", width: num === 10  ? "26px" : "24px"}} type="text" value={num} onChange={handleChange} />
+            <Button text={"+"} width={"34px"} height={"34px"} backgroundColor={"gray"} onClick={onAdd} />
+        </div>
+        <p style={{display: stock === 0  ? "inline-flex" : "none"}}>No hay stock</p>
+    </div>
+    )
 }
-    export default ItemCount
+
+export default ItemCount
