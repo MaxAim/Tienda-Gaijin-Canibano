@@ -1,0 +1,40 @@
+.tableDetail{
+    display: flex;
+    max-width: 100%;
+    border: white thick solid;
+    flex-flow: row;
+}
+
+img{
+    width: 100%;
+}
+
+.tableDark div img {
+    width: 100%; 
+}
+
+b {
+    color: #bc002d;
+    font-family: "Permanent Marker";
+    font-size:  1rem;
+}
+
+p {
+    font-family: "Poppins";
+    font-size: 1rem;
+}
+
+button{
+    width: 10px;
+}
+
+.ReactModal__Overlay--after-open{
+    background:none !important;
+}
+
+.ReactModal__Content{
+    height: min-content;
+    margin-top: 10%;
+    background-color: rgb(255, 255, 255, 0.5) !important;
+    border-radius: 10px;
+}
