@@ -5,7 +5,7 @@ import ItemDetail from "../ItemDetail";
 import { useParams } from "react-router";
 import Products from "../../Products"
 
-function ItemListContainer() {
+function ItemDetailContainer() {
   const [itemDetail, setItemDetail] = useState([]);
   const { itemsId } = useParams();
   const [loaded, setLoaded] = useState(0)
@@ -29,4 +29,4 @@ function ItemListContainer() {
 }
 
 
-export default ItemListContainer;
+export default ItemDetailContainer;
