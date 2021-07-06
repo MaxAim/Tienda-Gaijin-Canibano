@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.off{
+  color: blue;
+}
+
+.background, .tableDark, .tableDetail {
+  border: white solid thick;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-family: "Poppins";
+  margin: 2%;
+  padding: 10px;
+  color: white;
+  width: auto; 
+  border-radius: 10px;
+}
+
+.container{
+  display: flex;
+  flex-flow: column; 
+  align-items: center;
+}
+
+img{
+  border-radius: 10px;
+}
