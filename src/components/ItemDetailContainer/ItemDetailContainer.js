@@ -2,7 +2,7 @@ import "./ItemDetailContainer.css";
 import React, { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import ItemDetail from "../ItemDetail";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import Products from "../../Products"
 
 function ItemDetailContainer() {

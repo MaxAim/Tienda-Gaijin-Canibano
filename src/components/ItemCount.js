@@ -1,6 +1,6 @@
 import Button from "./Button";
 import React from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 
 
 function ItemCount({stock, num, setNum}){
