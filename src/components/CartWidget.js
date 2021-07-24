@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useContext, useState} from "react"
+import CartContext from '../context/CartContext'
+import { Link } from "react-router-dom"
 
-const CartWidget = () => {
-    return <div id="Cart"><a href={"/#"}>🛒</a></div>;
+
+const CartWidget = ()  => {
+    const { cartNum } = useContext(CartContext);
+    return <div id="Cart"><Link style={{height: "100%"}} to={"/cart"} >🛒{cartNum ? cartNum: ""}</Link></div>
 }
+
 
 export default CartWidget

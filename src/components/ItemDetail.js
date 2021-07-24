@@ -9,8 +9,7 @@ const ItemDetail = ({item, loaded}) => {
   const [num, setNum] = useState(0);
   const { addProducts } = useContext(CartContext)
   function handleClickConfirm() {
-    addProducts({id: item.id, amount: num})
-
+    addProducts({id: item.id, amount: num, description: item.description, name: item.title, price: item.price, key: item.number})
   }
     
   return(
