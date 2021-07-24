@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/tienda-gaijin-canibano/static/css/main.05ad7690.chunk.css",
-    "main.js": "/tienda-gaijin-canibano/static/js/main.8c0a615f.chunk.js",
-    "main.js.map": "/tienda-gaijin-canibano/static/js/main.8c0a615f.chunk.js.map",
-    "runtime-main.js": "/tienda-gaijin-canibano/static/js/runtime-main.b162609d.js",
-    "runtime-main.js.map": "/tienda-gaijin-canibano/static/js/runtime-main.b162609d.js.map",
-    "static/js/2.47b2af18.chunk.js": "/tienda-gaijin-canibano/static/js/2.47b2af18.chunk.js",
-    "static/js/2.47b2af18.chunk.js.map": "/tienda-gaijin-canibano/static/js/2.47b2af18.chunk.js.map",
-    "static/js/3.5f0ee04f.chunk.js": "/tienda-gaijin-canibano/static/js/3.5f0ee04f.chunk.js",
-    "static/js/3.5f0ee04f.chunk.js.map": "/tienda-gaijin-canibano/static/js/3.5f0ee04f.chunk.js.map",
+    "main.css": "/tienda-gaijin-canibano/static/css/main.e942336c.chunk.css",
+    "main.js": "/tienda-gaijin-canibano/static/js/main.0db4cfd1.chunk.js",
+    "main.js.map": "/tienda-gaijin-canibano/static/js/main.0db4cfd1.chunk.js.map",
+    "runtime-main.js": "/tienda-gaijin-canibano/static/js/runtime-main.4e44f524.js",
+    "runtime-main.js.map": "/tienda-gaijin-canibano/static/js/runtime-main.4e44f524.js.map",
+    "static/js/2.c8c8ab61.chunk.js": "/tienda-gaijin-canibano/static/js/2.c8c8ab61.chunk.js",
+    "static/js/2.c8c8ab61.chunk.js.map": "/tienda-gaijin-canibano/static/js/2.c8c8ab61.chunk.js.map",
+    "static/js/3.c11cb251.chunk.js": "/tienda-gaijin-canibano/static/js/3.c11cb251.chunk.js",
+    "static/js/3.c11cb251.chunk.js.map": "/tienda-gaijin-canibano/static/js/3.c11cb251.chunk.js.map",
     "index.html": "/tienda-gaijin-canibano/index.html",
-    "static/css/main.05ad7690.chunk.css.map": "/tienda-gaijin-canibano/static/css/main.05ad7690.chunk.css.map",
-    "static/js/2.47b2af18.chunk.js.LICENSE.txt": "/tienda-gaijin-canibano/static/js/2.47b2af18.chunk.js.LICENSE.txt",
+    "static/css/main.e942336c.chunk.css.map": "/tienda-gaijin-canibano/static/css/main.e942336c.chunk.css.map",
+    "static/js/2.c8c8ab61.chunk.js.LICENSE.txt": "/tienda-gaijin-canibano/static/js/2.c8c8ab61.chunk.js.LICENSE.txt",
     "static/media/index.css": "/tienda-gaijin-canibano/static/media/bg.c0b6117b.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b162609d.js",
-    "static/js/2.47b2af18.chunk.js",
-    "static/css/main.05ad7690.chunk.css",
-    "static/js/main.8c0a615f.chunk.js"
+    "static/js/runtime-main.4e44f524.js",
+    "static/js/2.c8c8ab61.chunk.js",
+    "static/css/main.e942336c.chunk.css",
+    "static/js/main.0db4cfd1.chunk.js"
   ]
 }
