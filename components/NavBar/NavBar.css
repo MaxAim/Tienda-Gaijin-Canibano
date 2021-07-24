@@ -1,0 +1,67 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
+
+.NavBar {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2vw;
+    font-family: "Poppins";
+    position: fixed;
+    width: 96%;
+    top:2px;
+    left: 1.5%;
+    border: black solid thick;
+    background: grey;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.NavLink, .off, a, #Cart{
+    color: black;
+    flex-grow: 1;
+    cursor: pointer;
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.NavLink:hover, #Cart:hover{
+    color: white;
+    background-color: black;
+}
+.off{
+    color: darkblue;
+}
+.off:hover{
+    color: lightblue;
+}
+
+h1 {
+    color: white;
+    font-size: 3vw;
+    font-family: "Permanent Marker";
+}
+
+b{
+    color: rgb(188,0,45);
+    font-size: 1.5vw;
+}
+
+
+#Cart{
+    background-color: lightblue;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4vw;
+}
+
+.links:hover, #Cart:hover{
+    color: white;
+    background-color: black;
+}
