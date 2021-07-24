@@ -1,28 +1,30 @@
 import "./ItemListContainer.css";
 import React, { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
-import Products from "../../Products";
 import { useParams } from "react-router-dom";
+import { getFireStore } from "../../firebase";
 
 function ItemListContainer() {
   const [items, setItems] = useState([]);
   const [loaded, setLoaded] = useState(0)
-  useEffect(() => {
-    const loadList = new Promise((resolve, reject) => {
-      setTimeout(function() {
-        resolve(Products);
-      }, 2000);
-    })
-    loadList.then(res => {
-        setItems(res);
-        setLoaded(1)
-      });
-    },[])
   const { categoryId } = useParams();
-  const itemsCategory = items.filter(item => item.category === categoryId)   
+  
+  useEffect(() => {
+    const db = getFireStore()
+    const loadList = db.collection("products")
+    const itemCategory = categoryId !== undefined ? loadList.where("category", "==", categoryId) : loadList
+    itemCategory.get().then((querySnapshot) => {
+      if(querySnapshot.size === 0){
+        console.log("No responce")
+      }
+      setItems(querySnapshot.docs.map(doc => doc.data()))
+      setLoaded(1)
+    })
+  },[categoryId])
+
   return (
     <>
-      {categoryId === undefined ? <ItemList loaded={loaded} items={items} /> : <ItemList loaded={loaded} items={itemsCategory} />}
+      <ItemList loaded={loaded} items={items} />
     </>
   );
 }
