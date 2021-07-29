@@ -1,0 +1,7 @@
+#ItemListContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+b{
+    font-size: 9vw;
+}

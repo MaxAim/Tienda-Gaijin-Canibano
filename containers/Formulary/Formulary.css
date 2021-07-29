@@ -1,0 +1,9 @@
+fieldset{
+    display: flex;
+}
+fieldset div, fieldset input, textarea{
+    min-width: 50%;
+}
+fieldset input{
+    height: 2rem;
+}

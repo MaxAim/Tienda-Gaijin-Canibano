@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 
 const CartItem = ({item, loaded}) => {
-    const { deleteItem, cartLoad } = useContext(CartContext)
+    const { deleteItem } = useContext(CartContext)
     function handleOnClick() {
         deleteItem(item)
     }
