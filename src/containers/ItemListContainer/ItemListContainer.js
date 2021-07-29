@@ -1,6 +1,6 @@
 import "./ItemListContainer.css";
 import React, { useEffect, useState } from "react";
-import ItemList from "../ItemList/ItemList";
+import ItemList from "../../components/ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { getFireStore } from "../../firebase";
 
@@ -18,8 +18,8 @@ function ItemListContainer() {
         console.log("No responce")
       }
       setItems(querySnapshot.docs.map(doc => doc.data()))
+      setLoaded(1)
     })
-    setLoaded(1)
   },[categoryId])
 
   return (

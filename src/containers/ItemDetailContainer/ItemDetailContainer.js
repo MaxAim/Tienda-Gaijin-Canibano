@@ -1,6 +1,6 @@
 import "./ItemDetailContainer.css";
 import React, { useEffect, useState } from "react";
-import ItemDetail from "../ItemDetail";
+import ItemDetail from "../../components/ItemDetail";
 import { useParams } from "react-router-dom";
 import { getFireStore } from "../../firebase";
 
@@ -16,8 +16,8 @@ function ItemDetailContainer() {
         console.log("No responce")
       }
       setItemDetail(querySnapshot.docs.map(doc => doc.data())[0])
+      setLoaded(1)
     })
-    setLoaded(1)
   },[itemsId])
 
   return (
