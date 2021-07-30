@@ -10,7 +10,6 @@ function Formulary ({setUserInfo, userInfo, completeOrder}) {
     
     const handleChange = (event) => {
         const { name, value } = event.target
-        console.log(userInfo)
         setUserInfo((state) => {
             return { ...state, [name]: value }
         })

@@ -37,7 +37,7 @@ function Cart() {
     const completeOrder = () => {   
         orders.add(newOrder).then(({id}) => {
             setOrderId(id)
-            console.log(orderId)
+            alert("Gracias " + userInfo.name + " por tu compra. El id de tu orden es " + id)
         }).catch(err => {
             console.log(err);
         })
@@ -60,9 +60,9 @@ function Cart() {
             <div>
                 <div className={"tableDark"}>
                     <div style={{width: "100%", minHeight: "500px", display: "grid"}}>
-                        <div style={{position: "absolute", alignSelf: "center", zIndex: "2", height: "40px", justifySelf: "center"}}>
+                        <div style={{position: "absolute", justifyContent: "center", zIndex: "2", width: "100%", alignItems: "center", height: "500px", display: "flex"}}>
                             <Button border={"none"} backgroundColor={"rgb(18, 0, 177)"} color={"white"} text={"Seguir comprando"} onClick={goBack} height={"50px"} width={"150px"} />
-                            <Button border={"none"} backgroundColor={"rgb(177, 0, 18)"} color={"white"} text={"Seguir comprando pero en rojo"} onClick={goBack} height={"auto"} width={"150px"} margin={"0px 0px 0px 135px"} />
+                            <Button border={"none"} backgroundColor={"rgb(177, 0, 18)"} color={"white"} text={"Seguir comprando pero en rojo"} onClick={goBack} height={"auto"} width={"150px"} margin={"0px 50px 50px 170px"} />
                         </div>
                         <img style={{width: "500px", height: "100px", justifySelf: "center", paddingRight:"250px"}} src={"https://raw.githubusercontent.com/MaxAim/tienda-gaijin-canibano/main/src/img/vacio.png"} alt={"Carrito vacio"} />
                         <img style={{maxHeight: "400px", maxWidth: "400px", justifySelf: "center"}} src={"https://raw.githubusercontent.com/MaxAim/tienda-gaijin-canibano/main/src/img/nada.png"} alt={"Carrito vacio"} />
@@ -72,7 +72,7 @@ function Cart() {
             :
             <div>
                 {items.map((item) => (<CartItem item={item} loaded={loaded} key={item.key} />))}
-                <div style={{display: "flex", justifyContent: "end"}}>
+                <div style={{display: "flex", justifyContent: "flex-end"}}>
                     <div className={"tableDark"} id={"totalCost"}>
                         <div style={{marginRight: "5%"}}>Total:</div>
                         <div>¥{totalPrice()}</div>

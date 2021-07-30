@@ -8,7 +8,12 @@ const CartProvider = ({ children }) => {
         if (cart.find(({ id }) => id === itemInfo.id)) {
             const itemLoader = cart.map((item) => {
                 if (item.id === itemInfo.id) {
-                    return { ...item, amount: itemInfo.amount }
+                    if(item.amount + itemInfo.amount >= itemInfo.stock){
+                        alert("Stock insuficiente")
+                    }
+                    else{
+                        return { ...item, amount: item.amount + itemInfo.amount}
+                    }
                 }
                 return item
             })
@@ -20,6 +25,7 @@ const CartProvider = ({ children }) => {
             })
         }
     }
+
     const cartLoad = () => {
         setCartNum(cart.reduce((acumulador, item) => acumulador + item.amount, 0))
     }
