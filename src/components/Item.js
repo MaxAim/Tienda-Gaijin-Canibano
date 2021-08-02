@@ -9,7 +9,7 @@ function Item ({item}){
     return(
         <div className={"subTable"}>
             <div>
-                <div style={{width: "100%"}}><Link id={"pictureContainer"} to={{pathname:`/item/${item.id}`}}><img alt={item.title} src={"https://raw.githubusercontent.com/MaxAim/Tienda-Gaijin-Canibano/main/src/img/" + item.id + ".jpg"}/></Link></div>
+                <div style={{width: "100%"}}><Link id={"pictureContainer"} to={{pathname:`/item/${item.id}`}}><img alt={item.title} src={item.image}/></Link></div>
                 <div style={{width: "100%", paddingTop: "2%"}}><b>{item.title}</b></div>
             </div>
             <div style={{display: "flex", paddingTop: "10%"}}>

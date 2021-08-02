@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 const CartWidget = ()  => {
     const { cartNum } = useContext(CartContext);
-    return <div id="Cart"><Link style={{height: "100%"}} to={"/cart"} >🛒{cartNum ? cartNum: ""}</Link></div>
+    return <div id="Cart"><Link style={{height: "100%"}} to={"/cart"} >🛒{cartNum ? cartNum : ""}</Link></div>
 }
 
 

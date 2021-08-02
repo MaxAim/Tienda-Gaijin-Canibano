@@ -1,8 +1,6 @@
 import Button from "./Button";
 import React from "react";
 
-
-
 function ItemCount({stock, num, setNum}){
     function onAdd(){
         num < stock ? setNum(num + 1) : setNum(num);
