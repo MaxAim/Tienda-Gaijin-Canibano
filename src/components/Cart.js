@@ -11,7 +11,7 @@ import PopUp from "../containers/Modal/Modal";
 
 function Cart() {
     const db = getFireStore();
-    const { cart, totalPrice, setCart } = useContext(CartContext);
+    const { cart, totalPrice, setCart, handleShow, setErrorText } = useContext(CartContext);
     const [loaded, setLoaded] = useState(0)
     const history = useHistory()
     const [orderId, setOrderId] = useState(null)
@@ -32,16 +32,20 @@ function Cart() {
     const completeOrder = () => {   
         orders.add(newOrder).then(({id}) => {
             setOrderId(id)
-            alert("Gracias " + userInfo.name + " por tu compra. El id de tu orden es " + orderId)
+            setErrorText("Gracias " + userInfo.name + " por tu compra. El id de tu orden es " + id)
+            handleShow()
         }).catch(err => {
             console.log(err);
         })
-        setCart([])
-        setTimeout(() => {
-            history.push("/");
-        }, 1);
     }
     
+    const cleanCart = () => {
+        if(orderId !== null){
+            setCart([])
+            history.push("/");
+        }
+    };
+
     useEffect(() => {
         setLoaded(1)
     },[cart])
@@ -64,7 +68,7 @@ function Cart() {
             </div>
             :
             <div>
-                <PopUp />
+                <PopUp cleanCart={cleanCart} />
                 {cart.map((item) => (<CartItem item={item} loaded={loaded} key={item.key} />))}
                 <div style={{display: "flex", justifyContent: "flex-end"}}>
                     <div className={"tableDark"} id={"totalCost"}>
