@@ -9,14 +9,14 @@ const ItemDetail = ({item, loaded}) => {
   const [num, setNum] = useState(0);
   const { addProducts } = useContext(CartContext)
   function handleClickConfirm() {
-    addProducts({id: item.id, amount: num, description: item.description, name: item.title, price: item.price, key: item.number, stock: item.stock - num})
+    addProducts({id: item.id, amount: num, name: item.title, price: item.price, key: item.number, stock: item.stock, image: item.image, description: item.description})
   }
   return(
     <div>
       <div className={"tableDetail"} style={{display: loaded !== 1 ? "flex" : "none", }}>Cargando...</div>
       <div className={"subTable tableDetail"} style={{display: loaded !== 1 ? "none" : "flex", }}>
           <div style={{display: "flex"}}>
-              <div style={{width: "15%"}}><img alt={item.title} src={"https://raw.githubusercontent.com/MaxAim/tienda-gaijin-canibano/main/src/img/" + item.id + ".jpg"}/></div>
+              <div style={{width: "15%"}}><img alt={item.title} src={item.image}/></div>
               <div style={{width: "85%", paddingLeft: "2%", display: "grid", justifyItems: "center"}}><b>{item.title}</b><p>{item.description}</p></div>
           </div>
           <div style={{display: "grid", justifyItems: "center", width: "25%", padding: "2%"}}>
