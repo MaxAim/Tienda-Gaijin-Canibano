@@ -9,7 +9,7 @@ function ItemListContainer() {
   const [loaded, setLoaded] = useState(0);
   const { categoryId } = useParams();
   const history = useHistory();
-
+  
   useEffect(() => {
     const db = getFireStore();
     const loadList = db.collection("products");
