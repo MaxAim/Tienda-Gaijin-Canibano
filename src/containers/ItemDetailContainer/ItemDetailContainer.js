@@ -7,20 +7,20 @@ import { getFireStore } from "../../firebase";
 function ItemDetailContainer() {
   const [itemDetail, setItemDetail] = useState([]);
   const { itemsId } = useParams();
-  const history = useHistory()
-  const [loaded, setLoaded] = useState(0)
+  const history = useHistory();
+  const [loaded, setLoaded] = useState(0);
   useEffect(() => {
-    const db = getFireStore()
-    const loadItem = db.collection("products").where("id", "==", itemsId)
+    const db = getFireStore();
+    const loadItem = db.collection("products").where("id", "==", itemsId);
     loadItem.get().then((querySnapshot) => {
-      if(querySnapshot.size === 0){
-        console.log("No responce")
+      if (querySnapshot.size === 0) {
+        console.log("No responce");
         history.push("/");
       }
-      setItemDetail(querySnapshot.docs.map(doc => doc.data())[0])
-      setLoaded(1)
-    })
-  },[itemsId, history])
+      setItemDetail(querySnapshot.docs.map((doc) => doc.data())[0]);
+      setLoaded(1);
+    });
+  }, [itemsId, history]);
 
   return (
     <>
@@ -28,6 +28,5 @@ function ItemDetailContainer() {
     </>
   );
 }
-
 
 export default ItemDetailContainer;

@@ -9,10 +9,11 @@ const NavBar = () => {
       <header className="NavBar">
         <NavLink to={"/"} style={{ padding: "0 2% 0 2%" }}>
           <h1>
-            Tienda <b style={{ fontSize: "3vw", textShadow: "none"}}>⬤</b> Gaijin
+            Tienda <b style={{ fontSize: "3vw", textShadow: "none" }}>⬤</b>{" "}
+            Gaijin
           </h1>
         </NavLink>
-        <NavLink to={"/"}  className={"NavLink"}>
+        <NavLink to={"/"} className={"NavLink"}>
           Todos
         </NavLink>
         <NavLink

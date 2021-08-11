@@ -29,10 +29,6 @@
     text-decoration: none;
 }
 
-.NavLink:hover, #Cart:hover{
-    color: white;
-    background-color: black;
-}
 .off{
     color: darkblue;
 }
@@ -61,7 +57,7 @@ b{
     width: 4vw;
 }
 
-.links:hover, #Cart:hover{
+.NavLink:hover, #Cart a:hover{
     color: white;
     background-color: black;
 }
