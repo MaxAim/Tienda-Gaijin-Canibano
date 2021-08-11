@@ -6,23 +6,26 @@ import { getFireStore } from "../../firebase";
 
 function ItemListContainer() {
   const [items, setItems] = useState([]);
-  const [loaded, setLoaded] = useState(0)
+  const [loaded, setLoaded] = useState(0);
   const { categoryId } = useParams();
-  const history = useHistory()
+  const history = useHistory();
   
   useEffect(() => {
-    const db = getFireStore()
-    const loadList = db.collection("products")
-    const itemCategory = categoryId !== undefined ? loadList.where("category", "==", categoryId) : loadList
+    const db = getFireStore();
+    const loadList = db.collection("products");
+    const itemCategory =
+      categoryId !== undefined
+        ? loadList.where("category", "==", categoryId)
+        : loadList;
     itemCategory.get().then((querySnapshot) => {
-      if(querySnapshot.size === 0){
-        console.log("No responce")
+      if (querySnapshot.size === 0) {
+        console.log("No responce");
         history.push("/");
       }
-      setItems(querySnapshot.docs.map(doc => doc.data()))
-      setLoaded(1)
-    })
-  },[categoryId, history])
+      setItems(querySnapshot.docs.map((doc) => doc.data()));
+      setLoaded(1);
+    });
+  }, [categoryId, history]);
 
   return (
     <>
