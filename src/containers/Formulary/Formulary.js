@@ -16,6 +16,7 @@ function Formulary({ setUserInfo, userInfo, completeOrder, display }) {
     userInfo["email"].lastIndexOf("@") > 0 &&
     userInfo["email"].indexOf("@@") === -1 &&
     userInfo["email"].lastIndexOf(".") > 2 &&
+    userInfo["email"] === userInfo["emailConfirm"] &&
     userInfo["email"].length - userInfo["email"].lastIndexOf(".") > 1;
   const phoneRules = (event) => {
     !(isFinite(event.key) || event.keyCode === 8) && event.preventDefault();
@@ -79,9 +80,18 @@ function Formulary({ setUserInfo, userInfo, completeOrder, display }) {
             onChange={handleChange}
             value={userInfo.email}
             id={"email"}
-            placeholder={"Email"}
+            placeholder={"ejemplo@email.com"}
             type={"email"}
             name={"email"}
+          />
+          <p>Confirmar mail:</p>
+          <input
+            required
+            onChange={handleChange}
+            value={userInfo.emailConfirm}
+            id={"emailConfirm"}
+            placeholder={"ejemplo@email.com"}
+            name={"emailConfirm"}
           />
           <p>Telefono:</p>
           <input
@@ -91,7 +101,7 @@ function Formulary({ setUserInfo, userInfo, completeOrder, display }) {
             onKeyDown={phoneRules}
             value={userInfo.phone}
             id={"telefono"}
-            placeholder={"phone"}
+            placeholder={"Telefono"}
             name={"phone"}
           />
           <p>Informacion extra:</p>
@@ -105,6 +115,8 @@ function Formulary({ setUserInfo, userInfo, completeOrder, display }) {
           />
         </div>
         <img
+          id={"boxGirl"}
+          style={{ width: "100%" }}
           src={
             "https://firebasestorage.googleapis.com/v0/b/tienda-gaijin.appspot.com/o/contacto.png?alt=media&token=6dfbf502-6abf-48da-b6c2-c5b077698005"
           }
